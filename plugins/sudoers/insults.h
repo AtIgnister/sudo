@@ -64,6 +64,10 @@ const char *insults[] = {
  */
 #define INSULT		(insults[arc4random_uniform(NOFINSULTS)])
 
+static inline const char * get_insult() {
+    return insults[arc4random_uniform(NOFINSULTS)];
+}
+
 #endif /* HAL_INSULTS || GOONS_INSULTS || CLASSIC_INSULTS || CSOPS_INSULTS || PYTHON_INSULTS */
 
 #endif /* SUDOERS_INSULTS_H */
